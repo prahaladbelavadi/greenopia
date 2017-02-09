@@ -5,6 +5,8 @@ Logo relative
 glyphicons
 #not-working
 Submit redirection
+Auto focus
+focus traversal
 #absence
 Angular scopes
 node framework

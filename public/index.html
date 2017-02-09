@@ -35,10 +35,10 @@
         <div class="jumbotron">
           <div class="wrapper" >
             <!-- <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"> -->
-              <input class="inputs" type="text"   id="1-input-div">
-              <input class="inputs" type="text" id="2-input-div">
-              <input class="inputs" type="text" id="3-input-div">
-              <input class="inputs" type="text" id="4-input-div">
+              <input class="inputs" type="text" id="input-1-div" autofocus="1">
+              <input class="inputs" type="text" id="input-2-div" autofocus="2">
+              <input class="inputs" type="text" id="input-3-div" autofocus="3">
+              <input class="inputs" type="text" id="input-4-div" autofocus="4">
             <!-- </div> -->
         </div>
 <br>
@@ -82,9 +82,16 @@
   align-items: center;
 }
   </style>
-  <script>$($(document).ready(function() {
-    $("wrapper inputs:first").focus();
-  });)
+  <script>$(document).ready(function() {
+    $("#input-1-div").focus();
+    function(input){
+      if (input != 0){
+        $(".inputs:next").focus();
+      }else {
+        return false;
+      }
+    }
+  });
   // script tag for testing
   </script>
 </html>
