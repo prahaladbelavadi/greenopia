@@ -1,21 +1,25 @@
-var express = require ("express");
-var app = express ();
-var PORT =process.env.PORT || 3000;
-// app.get("/", function(req,res){
-//   res.send("Hello, Express!")
-// });
-// var middleware = require("./middleware.js")
+var express = require('express')
+  , app = express() // Web framework to handle routing requests
+  , bodyParser = require('body-parser')
 
-// app.use(middleware.logger)
-// app.use(middleware.requireAuthentication);
-
-app.get("/about", function(req,res){
-  res.send("About Us!!")
-})
-
-app.use(express.static(__dirname+"/public"));
+  , MongoClient = require('mongodb').MongoClient // Driver for connecting to MongoDB
+  , routes = require('./routes'); // Routes for our application
 
 
-app.listen(PORT, function(){
-  console.log("Express Server started at port:"+ PORT+"!");
+
+ app.use(bodyParser());
+ app.use('/',express.static(__dirname + '/greenopia'));
+
+
+
+MongoClient.connect('mongodb://localhost:27017/greenopiaDatabase', function(err, db) {
+    "use strict";
+    if(err) throw err;
+
+
+    // Application routes
+    routes(app, db);
+
+    app.listen(8080);
+    console.log('Express server listening on port 8080');
 });

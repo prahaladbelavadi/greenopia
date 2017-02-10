@@ -11,10 +11,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!-- removed css file  <!-- <link rel="stylesheet" href="/css/master.css"> --> -->
+    <link rel="stylesheet" href="/css/master.css">
     <!--  -->
   </head>
-  <body>
+  <body style="background-color:#32CD32">
     <div class="container">
       <br>
       <div class="container-fluid">
@@ -34,17 +34,23 @@
         </div>
         <div class="jumbotron">
           <div class="wrapper" >
+          <form class="" action="add_user" method="POST">
+
             <!-- <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"> -->
-              <input class="inputs" type="text" id="input-1-div" autofocus="1">
-              <input class="inputs" type="text" id="input-2-div" autofocus="2">
-              <input class="inputs" type="text" id="input-3-div" autofocus="3">
-              <input class="inputs" type="text" id="input-4-div" autofocus="4">
+            Title:  <input class="inputs" type="text" name="title">
+            Year  <input class="inputs" type="text" name="year">
+            imdb<input class="inputs" type="text" name="imdb">
+               <input class="inputs" type="submit" value="submit" id="input-4-div" name="">
+               <input type="submit" value="Submit"/>
+
             <!-- </div> -->
+          </form>
+
         </div>
 <br>
         <div class="">
 
-          <button type="button" class="btn btn-success btn-lg col-xs-offset-3 col-xs-6 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 ">
+          <button type="button" type="submit" value="submit" class="btn btn-success btn-lg col-xs-offset-3 col-xs-6 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 ">
             <em>Greenopia ! <span class="glyphicon glyphicon-globe" style="text-align:right"></span></em>
           </button>
         </div>
@@ -63,39 +69,19 @@
 
   </body>
   <style media="screen">
-      .inputs{
-      text-align: center;
-      margin: 20px;
-      color: black`;
-      background: none;
-      padding:10px;
-      font-size: 3em;
-      border: 10px;
-      width: 40px;
-      height: 40px;
-      border-bottom: 4px solid #64B5F6;
-      position: relative;
-      }
+
       .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-}body{
-  background-color: #3D5AFE;
-}footer{
-  text-align: : center;
 }
   </style>
   <script>$(document).ready(function() {
-    $("#input-1-div").focus();
-    function(input){
-      if (input != 0){
-        $(".inputs:next").focus();
-      }else {
-        return false;
-      }
-    }
-  });
+    // $("#input-1-div").focus();
+    // function(input){
+      // }
+    // }
+  // });
   // script tag for testing
   </script>
 </html>
