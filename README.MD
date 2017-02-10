@@ -32,8 +32,7 @@ To access mongo Database, type 'mongo' in another terminal\
 type "mongorestore dump" to restore Database from dump -->
 
 -Server.js:{
-  'inclusive':['greenopia.js','routes/*','greenopia/*'],
-  
-
-
+  'inclusive':['greenopia.js','routes/*','greenopia/*']
+  File structure depreciated upon intent.
+  Contact admin or greenopia for further queries.
 }
